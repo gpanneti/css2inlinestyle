@@ -10,19 +10,19 @@ css2inlinestyle is a simple extension to convert CSS code to inline style javasc
 
 ### Open the CSS file
 
-![Open the CSS file](./images/screen-0.png)
+![Open the CSS file](images/screen-0.png)
 
 ### Select the code you want to convert
 
-![Select the code you want to convert](./images/screen-1.png)
+![Select the code you want to convert](images/screen-1.png)
 
 ### Execute the command
 
-![Execute the command](./images/screen-2.png)
+![Execute the command](images/screen-2.png)
 
 ### Enjoy
 
-![Enjoy](./images/screen-3.png)
+![Enjoy](images/screen-3.png)
 
 ## Release Notes
 
