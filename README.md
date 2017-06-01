@@ -16,9 +16,9 @@ css2inlinestyle is a simple extension to convert CSS code to inline style javasc
 
 ![Select the code you want to convert](images/screen-1.png)
 
-### Execute the command
+### Execute the command "Convert CSS to inline style"
 
-![Execute the command](images/screen-2.png)
+![Execute the command "Convert CSS to inline style"](images/screen-2.png)
 
 ### Enjoy
 
