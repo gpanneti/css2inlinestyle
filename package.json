@@ -2,7 +2,7 @@
     "name": "css2inlinestyle",
     "displayName": "CSS2InlineStyle",
     "description": "A simple extension to convert CSS to inline style that you can use on your React application.",
-    "version": "1.1.4",
+    "version": "1.1.5",
     "publisher": "gpanneti",
     "repository": "https://github.com/gpanneti/css2inlinestyle.git",
     "engines": {
