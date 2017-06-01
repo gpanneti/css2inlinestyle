@@ -8,9 +8,12 @@ css2inlinestyle is a simple extension to convert CSS code to React inline style.
 - Remove prefixes
 - If find duplicate rules, check their values. If the values are similar, just keep one of them. If their values are differents, keep the duplicate values and display a warning message.
 
-### Open the CSS file
+## How make it works
+1. Select your CSS code
+2. Execute the command "Convert CSS to inline style"
+3. Enjoy !
 
-![Open the CSS file](https://github.com/gpanneti/css2inlinestyle/blob/master/images/screen-0.png)
+> Tip: To bind a keyboard shortcut to the command, open the keybinding preferences and look for "css2inlinestyle"
 
 ### Select the code you want to convert
 
@@ -26,6 +29,8 @@ css2inlinestyle is a simple extension to convert CSS code to React inline style.
 
 ## Release Notes
 
+### 1.1.1 --> 1.1.4
+Enhance README.md
 
 ### 1.0.0
 
