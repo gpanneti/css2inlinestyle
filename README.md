@@ -1,6 +1,6 @@
 # css2inlinestyle README
 
-css2inlinestyle is a simple extension to convert CSS code to inline style javascript code as you can use in ReactJs or ReactNative.
+css2inlinestyle is a simple extension to convert CSS code to React inline style.
 
 ## Features
 
