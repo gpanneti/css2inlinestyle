@@ -33,6 +33,9 @@ You will find the code on my [github repository](https://github.com/gpanneti/css
 
 ## Release Notes
 
+### 1.1.6 --> 1.1.7
+Fix README.md
+
 ### 1.1.5
 Fix a bug: prefixes were not removed if the rule was not on the first line of the selection
 
