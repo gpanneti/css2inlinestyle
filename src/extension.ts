@@ -88,6 +88,63 @@ export function activate(context: vscode.ExtensionContext) {
     });
 
     context.subscriptions.push(disposable);
+
+
+
+  context.subscriptions.push(vscode.commands.registerCommand('extension.inlinestyle2css', () => {
+      let upCaseRegex = new RegExp('[A-Z]'),
+        ruleRegex = new RegExp('([^:]+): ?(?:"|\')(.+?)?(?:"|\'),?(\n)?([\s ]*})?');
+
+      // The code you place here will be executed every time your command is executed
+      let editor = window.activeTextEditor;
+      if (!editor) {
+        vscode.window.showErrorMessage('No file opened.');
+        return;
+      }
+
+      let selection = editor.selection;
+      if (!selection) {
+        vscode.window.showErrorMessage('No text selected.');
+        return;
+      }
+
+      let text = editor.document.getText(selection);
+      if (!text.length) {
+        vscode.window.showErrorMessage('No text selected.');
+        return;
+      }
+
+      editor.edit(function (editBuilder) {
+        // remove selection
+        editBuilder.delete(selection);
+
+        text = text.replace(new RegExp(ruleRegex.source, 'g'), function (matchString) {
+          let match = matchString.match(ruleRegex),
+            ruleName = match[1],
+            escapedName = '',
+            ruleValue = match[2],
+            isLast = !match[3] || Boolean(match[4]),
+            replaceText = '';
+
+          // if dashed regex, remove the dash and convert next letter in UpperCase
+          ruleName = ruleName.replace(new RegExp(upCaseRegex, 'g'), function (nameMatchString) {
+            let nameMatch = nameMatchString.match(upCaseRegex);
+            return '-' + nameMatch[0];
+          });
+
+          replaceText = ruleName + ': ' + ruleValue + ';';
+          if (!isLast) {
+            replaceText += '\n';
+          }
+
+          return replaceText;
+        });
+
+        editBuilder.insert(selection.start, text);
+
+        return true;
+      });
+    }));
 }
 
 // this method is called when your extension is deactivated
