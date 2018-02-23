@@ -13,9 +13,7 @@
     "css",
     "react",
     "inline",
-    "html",
-    "web",
-    "convert"
+    "converter"
   ],
   "categories": [
     "Formatters",
