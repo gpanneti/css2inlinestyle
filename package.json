@@ -8,8 +8,9 @@
     "engines": {
         "vscode": "^1.12.0"
     },
+    "keywords": ["style", "css", "react", "inline", "html", "web", "convert"],
     "categories": [
-        "Formatters"
+        "Formatters", "Snippets"
     ],
     "activationEvents": [
         "onCommand:extension.css2inlinestyle",
@@ -20,11 +21,15 @@
         "commands": [
             {
                 "command": "extension.css2inlinestyle",
-                "title": "Convert CSS to inline style"
+                "title": "Convert CSS to inline style",
+                "key": "ctrl+alt+c",
+                "mac": "alt+cmd+c"
             },
             {
               "command": "extension.inlinestyle2css",
-              "title": "Convert inline style to CSS"
+              "title": "Convert inline style to CSS",
+              "key": "ctrl+alt+c",
+              "mac": "cmd+alt+c"
             }
         ]
     },
